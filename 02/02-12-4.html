@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <form action="?">
+    <p>
+      <input type="text" value="test" readonly>
+      <input type="button" value="test">
+      <input type="checkbox" value="test" checked>
+      <input type="radio" value="test">
+    </p>
+  </form>
+
+  <script type="text/javascript">
+    const form = document.forms.item(0);
+
+    for(let i=0; i<form.elements.length; i++) {
+      console.log(form.elements[i].type);
+    }
+  </script>
+</body>
+</html>

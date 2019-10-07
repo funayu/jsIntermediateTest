@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <table id="aaa">
+    <thead>
+      <tr>
+        <td>thead1</td>
+        <td>thead2</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>tbody1</td>
+        <td>tbody2</td>
+      </tr>
+      <tr>
+        <td>tbody3</td>
+        <td>tbody4</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td>tfoot1</td>
+        <td>tfoot2</td>
+      </tr>
+    </tfoot>
+
+  </table>
+  <script type="text/javascript">
+    const table = document.getElementById('aaa');
+
+    const tbody = table.tBodies.item(0);
+
+    const newtr = tbody.insertRow(0);
+
+    table.deleteTHead();
+    table.deleteTFoot();
+
+    for(let i=0; i<2; i++) {
+      const newtd = newtr.insertCell(newtr.cells.length);
+      newtd.appendChild(document.createTextNode('gemoitest' + i));
+    }
+
+  </script>
+</body>
+</html>

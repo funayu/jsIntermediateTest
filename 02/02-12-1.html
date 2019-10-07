@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <form id="form1" action="?">
+
+  </form>
+
+  <script type="text/javascript">
+    // 1番目のformを取得
+    const form = document.forms.item(0);
+    console.log(form);
+
+    // id名でformの取得
+    const form2 = document.forms.namedItem("form1");
+    console.log(form2);
+    
+    const form3 = document.forms["form1"];
+    console.log(form3);
+
+    const form4 = document.forms.form1;
+    console.log(form4);
+
+  </script>
+</body>
+</html>

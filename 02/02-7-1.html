@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <p><strong>a</strong><em id="aaa">b</em><ins>c</ins></p>
+  <script type="text/javascript">
+    var aaa = document.getElementById('aaa');
+
+    var prev = aaa.previousSibling;
+    var next = aaa.nextSibling;
+
+    console.log(prev.tagName);
+    console.log(next.tagName);  
+  </script>
+</body>
+</html>

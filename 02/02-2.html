@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <p id="aaaaa">t<strong>es</strong>t</p>
+
+  <script type="text/javascript">
+    const p = document.getElementById('aaaaa');
+    const children = p.childNodes;
+    const textnode = children[0]; // テキストノード
+    p.removeChild(textnode);
+    const strong = children[0]; //strong要素
+    p.removeChild(strong);
+
+    children[0].nodeValue = "書き換えました"
+  </script>
+</body>
+</html>

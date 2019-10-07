@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+  <head>
+    <title>test</title>
+  </head>
+  <body>
+    <p id="aaaaa">t<strong>es</strong>t</p>
+
+    <script type="text/javascript">
+      var a = document.createElement('a');
+      a.href = "http://www.google.com/";
+
+      var textnode = document.createTextNode("Google");
+      a.appendChild(textnode);
+
+      var p = document.getElementById('aaaaa');
+      p.insertBefore(a, p.firstChild);
+    </script>
+  </body>
+</html>

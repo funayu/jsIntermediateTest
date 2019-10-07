@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <form action="?">
+    <p>
+      <input id="aaa" type="text" value="gemotest">
+      <input type="button" value="check" onclick="check();">
+    </p>
+  </form>
+  <script type="text/javascript">
+    function check() {
+      const input = document.getElementById('aaa');
+      console.log(input.value);
+    }
+  </script>
+</body>
+</html>
