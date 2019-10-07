@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <p><a href="https://google.com/">test</a></p>
+
+  <script type="text/javascript">
+    const listener = function(ev) {
+      console.log("listener");
+      ev.preventDefault();
+    };
+
+    document.getElementsByTagName('a').item(0).addEventListener('click', listener, false);
+  </script>
+</body>
+</html>
