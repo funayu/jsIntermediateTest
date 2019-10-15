@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style type="text/css" id="mysheet">
+    body {
+      background-color: aqua;
+    }
+    div {
+      background-color: white;
+    }
+    p {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <p>testtest</p>
+  <script type="text/javascript">
+    // style要素のsheetプロパティからCSSStyleSheetを取得して表示
+    const style = document.getElementById("mysheet");
+    console.log(style.sheet);
+
+    const sheet = document.styleSheets.item(0);
+    // disabledはスタイルシートを無効化するかどうかのプロパティ
+    alert(sheet.disabled);
+    // スタイルシートを無効化する
+    sheet.disabled = true;
+
+    // sheet要素のノード
+    console.log(sheet.ownerNode);
+
+    // cssルールを取得して表示
+    const cssrule = sheet.cssRules.item(0);
+    console.log(cssrule.cssText);
+
+  </script>
+</body>
+</html>

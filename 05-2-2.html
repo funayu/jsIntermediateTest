@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style type="text/css" id="mysheet">
+    body {
+      background-color: aqua;
+    }
+    div {
+      background-color: white;
+    }
+    p {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <p>testtest</p>
+  <script type="text/javascript">
+    const cssRule = document.styleSheets[0].cssRules[0];
+    // body要素の背景色を変更
+    cssRule.style.backgroundColor = "blue";
+
+    // setPropertyでp要素の背景色を設定
+    const cssRule3 = document.styleSheets[0].cssRules[2];
+    cssRule3.style.setProperty("background-color", "pink");
+
+    // プロパティの値を取得して表示
+    console.log(cssRule.style.getPropertyValue("background-color"));
+
+    // body要素の背景色プロパティを削除
+    cssRule.style.removeProperty("background-color");
+  </script>
+</body>
+</html>

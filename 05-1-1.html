@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>test</title>
+    <style type="text/css">
+      p {
+        background-color: yellow;
+      }
+      p::first-letter {
+        font-size: 2em;
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <p>testtest</p>
+    <script type="text/javascript">
+      const p = document.getElementsByTagName("p").item(0);
+
+      // タグのスタイルを取得
+      const style = document.defaultView.getComputedStyle(p, null);
+      console.log(style.backgroundColor);
+
+      // 擬似要素のスタイルを取得
+      const style2 = document.defaultView.getComputedStyle(p, "::first-letter");
+      console.log(style2.backgroundColor);
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <p>なんとかなんとか</p>
+  <p>なんとかなんとか</p>
+  <p>なんとかなんとか</p>
+</body>
+<script type="text/javascript">
+  const newStyle = document.createElement("style");
+  newStyle.type = "text/css";
+
+  document.getElementsByTagName("head")[0].appendChild(newStyle);
+  newStyle.sheet.insertRule("p { background-color: yellow; }", 0);
+
+  // 途中、CSSStyleSheetの追加と削除の内容理解から再開
+</script>
+</html>

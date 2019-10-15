@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style type="text/css" id="mysheet">
+    body {
+      background-color: aqua;
+    }
+    div {
+      background-color: white;
+    }
+    p {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <p>testtest</p>
+  <script type="text/javascript">
+    // CSSStyleSheetを変数に代入
+    const stylesheet = document.styleSheets.item(0);
+
+    // CSSStyleRuleの追加、第二引数は追加位置（一番最後に追加される）
+    stylesheet.insertRule("body { background-color:#00ff00; }", stylesheet.cssRules.length);
+
+    // cssのルールを削除
+    stylesheet.deleteRule(2);
+
+  </script>
+</body>
+</html>
