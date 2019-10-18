@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <p>なんとかなんとか</p>
+  <p>なんとかなんとか</p>
+  <p>なんとかなんとか</p>
+</body>
+<script type="text/javascript">
+  const newStyle = document.createElement('style');
+  // HTML5ではtype属性は必須でないため書かなくてもよい
+  newStyle.type = "text/css";
+
+  // headに作成したstyle要素を追加する
+  document.getElementsByTagName("head")[0].appendChild(newStyle);
+  // ルールの追加
+  newStyle.sheet.insertRule("p {background-color:yellow; }", 0);
+</script>
+</html>

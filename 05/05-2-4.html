@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body {
+      background-color: aqua;
+    }
+  </style>
+</head>
+<body>
+  <p>testtest</p>
+  <script type="text/javascript">
+    // style要素を取得
+    const stylesheet = document.styleSheets[0];
+
+    // stylesheetとdocumentと関連付けているノードを返す
+    const ele = stylesheet.ownerNode;
+    // style要素を削除する
+    ele.parentNode.removeChild(ele);
+  </script>
+</body>
+</html>
