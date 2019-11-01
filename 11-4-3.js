@@ -14,3 +14,5 @@ Teki.prototype.attack = function() {
 };
 
 const zako = new Teki("ザコ");
+
+console.log(Object.keys(zako));
