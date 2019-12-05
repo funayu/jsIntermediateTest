@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+    const obj = {
+      foo: 3,
+    };
+
+    Object.freeze(obj);
+
+    obj.foo = 5;
+
+    (function () {
+      'use strict';
+
+      obj.foo = 10;
+    })();
+  </script>
+</body>
+</html>
