@@ -13,8 +13,17 @@
     hoge1 = document.getElementById("hoge1");
     hoge2 = document.getElementById("hoge2");
 
-    console.log(hoge1.classList.contains("long"));
-    console.log(hoge2.classList.contains("long"));
+    hoge1.classList.add("foo");
+    console.log(hoge1.classList);
+
+    hoge1.classList.remove("foo");
+    console.log(hoge1.classList);
+
+    hoge1.classList.toggle("foo");
+    console.log(hoge1.classList);
+
+    hoge1.classList.toggle("foo");
+    console.log(hoge1.classList);
   </script>
 </body>
 </html>
